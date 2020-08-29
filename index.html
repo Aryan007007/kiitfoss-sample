@@ -3,25 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>... Aryan Asthana f3ff51 ...</title>
-    <link rel="stylesheet" href="">
+    <title>Document</title>
+    <style>
+        
+        :root{
+            --backgroundLight:#F7F3FF;
+            --backgroundDark:#363636;
+            --lightShadowLight:white;
+            --lightShadowDark:#1F0F4A40;
+            --darkShadowLight:#ffffff05;
+            --darkShadowDark:#00000040;
+        }
+        .light{
+            background-color:var(--backgroundLight);
+            height: 200px;
+            margin: 10px;
+        }
+
+        .upLight{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px var(--lightShadowDark), -5px -5px 5px var(--lightShadowLight);
+            background-color:var(--backgroundLight);
+            position: absolute;
+            top: 60px;
+            left: 100px;
+        }
+        .downLight{
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            background-color:var(--backgroundLight);
+            box-shadow: 5px 5px 5px var(--lightShadowDark) inset, -5px -5px 5px var(--lightShadowLight) inset;
+            position: absolute;
+            top: 60px;
+            left: 250px;
+        }
+        .borderedLight{
+            width: 90px;
+            height: 90px;
+            border: 5px solid var(--backgroundLight);
+            border-radius: 12px;
+            background-color:var(--backgroundLight);
+            box-shadow: 5px 5px 5px var(--lightShadowDark), 5px 5px 5px var(--lightShadowDark) inset, -5px -5px 5px var(--lightShadowLight), -5px -5px 5px var(--lightShadowLight) inset;
+            position: absolute;
+            top: 60px;
+            left: 400px; 
+        }
+        .dark{
+            background-color:var(--backgroundDark);
+            height: 200px;
+            margin: 10px;
+            /* padding: 10px;  */
+        }
+
+        .upDark{
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 5px var(--darkShadowDark), -5px -5px 5px var(--darkShadowLight);
+            background-color:var(--backgroundDark);
+            position: absolute;
+            top: 270px;
+            left: 100px;
+        }
+        .downDark{
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            background-color:var(var(--backgroundDark));
+            box-shadow: 5px 5px 5px var(--darkShadowDark) inset, -5px -5px 5px var(--darkShadowLight) inset;
+            position: absolute;
+            top: 270px;
+            left: 250px;
+        }
+        .borderedDark{
+            width: 90px;
+            height: 90px;
+            border: 5px solid var(--backgroundDark);
+            border-radius: 12px;
+            background-color:var(--backgroundDark);
+            box-shadow: 5px 5px 5px var(--darkShadowDark), 5px 5px 5px var(--darkShadowDark) inset, -5px -5px 5px var(--darkShadowLight), -5px -5px 5px var(--darkShadowLight) inset;
+            position: absolute;
+            top: 270px;
+            left: 400px; 
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>This is a sample HTML page</h1>
-    <a href="" target="_blank">A link that opens the same page in a new tab</a><br>
-    <a href="https://www.google.com/">Google</a><br>
-    <a href="https://www.wikipedia.org/">wikipedia</a><br> 
-    <strong>Statement1</strong><br>
-    <em>Statement 2</em>
-    <p>Some Random text</p>
-    <ul>
-        <li>This is a list</li>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    
-    <span style="background-color: aquamarine;">This is written inside a span tag</span>
-    <div style="background-color: blanchedalmond;">This is written in a div tag</div>
+    <section class="light">
+    <div class="upLight"></div>
+    <div class="downLight"></div>
+    <div class="borderedLight"></div>
+</section>
+<section class="dark">
+    <div class="upDark"></div>
+    <div class="downDark"></div>
+    <div class="borderedDark"></div>
+</section>
 </body>
 </html>
