@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KIIT FOSS/OSH</title>
     <style>
         
         :root{
@@ -14,15 +14,17 @@
             --darkShadowLight:#ffffff10;
             --darkShadowDark:#00000040;
         }
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body{
             background-color: var(--backgroundLight);
-            text-align: center;
+            text-align: left;
+            font-family: Amaranth;
         }
 
         .upLight{
-            /* width: 100px;
-            height: 100px;
-            border-radius: 12.5px; */
             box-shadow: 5px 5px 5px var(--lightShadowDark), -5px -5px 5px var(--lightShadowLight);
             background-color:var(--backgroundLight);
         }
@@ -39,17 +41,9 @@
             border: 5px solid var(--backgroundLight);
             border-radius: 12px;
             background-color:var(--backgroundLight);
-            box-shadow: 5px 5px 5px var(--lightShadowDark), 5px 5px 5px var(--lightShadowDark) inset, -5px -5px 5px var(--lightShadowLight), -5px -5px 5px var(--lightShadowLight) inset;
-            position: absolute;
-            top: 60px;
-            left: 400px; 
+            box-shadow: 5px 5px 5px var(--lightShadowDark), 5px 5px 5px var(--lightShadowDark) inset, -5px -5px 5px var(--lightShadowLight), -5px -5px 5px var(--lightShadowLight) inset; 
         }
-        .dark{
-            background-color:var(--backgroundDark);
-            height: 200px;
-            margin: 10px;
-            /* padding: 10px;  */
-        }
+    
 
         .upDark{
             width: 100px;
@@ -86,7 +80,8 @@
     @media screen and (max-width: 500px){
 
         section{
-            margin: 50px auto;
+            width: 90vw;
+            margin: 50px auto 0 auto;
         }
             
         nav{
@@ -95,6 +90,7 @@
             border-radius: 25px;
             margin: 20px auto;
 
+
         }
         #logo{
             position: absolute;
@@ -102,15 +98,43 @@
             left: -7.5vw;
 
         }
-
-        .streams{
-            width: 90vw;
-            height: 100px;
+        .wrapper{
+            width: 92vw;
             margin: auto;
             border-radius: 12.5px;
         }
 
+        .streams{
+            display: flex;
+            overflow: scroll;
+            padding: 20px 0;
+            width: 85vw;
+            margin: auto;
+            justify-content: start;
+            
+        }
+
+        .streams::-webkit-scrollbar{
+            display: none;
+        }
+        .streamCard{
+            flex : 180px 0 0;
+            height: 100px; 
+            border-radius: 7.5px ;
+            margin-left: 10px;
+            justify-content: space-between;
+        }   
+
+    .streamCard:not(:first-child){
+        margin-left: 20px;
     }
+
+    .streams::after{
+        content: "";
+        flex: 0 0 10px;
+    }
+        
+}
         
     </style>
 </head>
@@ -139,9 +163,18 @@
 
 
     <section>
-        <h1>The Streams</h1>
+        <strong>The Streams</strong>
 
-        <div class="downLight streams"></div>
+        <div class="downLight wrapper">
+            <div class="streams">
+            	<div class="streamCard upLight">One</div>
+            	<div class="streamCard upLight">Two</div>
+            	<div class="streamCard upLight">Three</div>
+            	<div class="streamCard upLight">Four</div>
+            	<div class="streamCard upLight">Five</div>
+            </div>
+            
+        </div>
     
     
     
