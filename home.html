@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIIT FOSS/OSH</title>
+    <script src="https://use.fontawesome.com/81a3138848.js"></script>
     <style>
         
         :root{
-            --backgroundLight:#F7F3FF;
+            /* --backgroundLight:#F7F3FF; */
+            --backgroundLight:#E6E6EE;
             --backgroundDark:#424242;
             --lightShadowLight:white;
-            --lightShadowDark:#1F0F4A40;
+            /* --lightShadowDark:#1F0F4A40; */
+            --lightShadowDark:#a9a9a9;
             --darkShadowLight:#ffffff10;
             --darkShadowDark:#00000040;
         }
@@ -22,10 +25,11 @@
             background-color: var(--backgroundLight);
             text-align: left;
             font-family: Amaranth;
+            line-height: 3em;
         }
 
         .upLight{
-            box-shadow: 5px 5px 5px var(--lightShadowDark), -5px -5px 5px var(--lightShadowLight);
+            box-shadow: 3px 3px 5px var(--lightShadowDark), -3px -3px 5px var(--lightShadowLight);
             background-color:var(--backgroundLight);
         }
         .downLight{
@@ -33,11 +37,9 @@
             height: 100px;
             border-radius: 12px; */
             background-color:var(--backgroundLight);
-            box-shadow: 5px 5px 5px var(--lightShadowDark) inset, -5px -5px 5px var(--lightShadowLight) inset;
+            box-shadow: 3px 3px 5px var(--lightShadowDark) inset, -3px -3px 5px var(--lightShadowLight) inset;
         }
         .borderedLight{
-            width: 90px;
-            height: 90px;
             border: 5px solid var(--backgroundLight);
             border-radius: 12px;
             background-color:var(--backgroundLight);
@@ -79,9 +81,15 @@
 
     @media screen and (max-width: 500px){
 
+        
         section{
             width: 90vw;
             margin: 50px auto 0 auto;
+            text-align: left;
+            
+        }
+        footer{
+            width: 100vw;
         }
             
         nav{
@@ -89,17 +97,33 @@
             width: 90vw;
             border-radius: 25px;
             margin: 20px auto;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
 
 
         }
-        #logo{
-            position: absolute;
-            top: 12px;
-            left: -7.5vw;
+
+        .logo{
+           width: 50px;
+           height: 60px;
+           margin-left: 10px; 
+           justify-self: left;
+        }
+
+        i{
+            justify-self: right;
+            margin-right: 10px;
+        }
+
+        a{
+            text-decoration: none;
+        }
 
         }
         .wrapper{
-            width: 92vw;
+            width: 90vw;
             margin: auto;
             border-radius: 12.5px;
         }
@@ -133,30 +157,82 @@
         content: "";
         flex: 0 0 10px;
     }
-        
-}
+    .news,.openSource{
+        margin: auto;
+        width: 90vw;
+        height: 300px;
+        border-radius: 12.5px;
+    }
+
+    .osExamples,.social{
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .circle{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .bracket{
+        width: 90vw;
+        margin: 70px auto 10px auto;
+        height: fit-content;
+    }
         
     </style>
 </head>
 <body>
     <nav class="upLight">
-        <div id="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80">
-                <g id="Logo_SVG" data-name="Logo SVG" transform="translate(-63 -270.689)">
-                  <g id="Logo_Shape" data-name="Logo Shape" transform="translate(-0.721 253.49)">
-                    <path id="Path_4" data-name="Path 4" d="M684.951,6.355V-31.078L717.017-49.49l31.558,18.412V6.355l-31.81,18.77Z" transform="translate(-573.23 69)" fill="none" stroke="#23a0d5" stroke-width="4"/>
-                    <path id="Path_5" data-name="Path 5" d="M684.951-34.16l8.319,7.923,23.187-14.118,23.977,14.118,7.342-8.551" transform="translate(-572.951 73)" fill="none" stroke="#23a0d5" stroke-width="4"/>
-                    <path id="Path_6" data-name="Path 6" d="M684.951-33.085l8.319-7.923,23.21,12.695,23.954-12.695,7.518,8.731" transform="translate(-572.951 108)" fill="none" stroke="#23a0d5" stroke-width="4"/>
-                    <path id="Path_7" data-name="Path 7" d="M625.533-48.061V-35.59" transform="translate(-482 68)" fill="none" stroke="#23a0d5" stroke-width="4"/>
-                    <path id="Path_8" data-name="Path 8" d="M625.412,11.687V25.864" transform="translate(-482 68)" fill="none" stroke="#23a0d5" stroke-width="4"/>
-                    <rect id="Rectangle_8" data-name="Rectangle 8" width="9" height="33" transform="translate(141.63 29.352) rotate(-59)" fill="#23a0d5"/>
-                    <rect id="Rectangle_9" data-name="Rectangle 9" width="11" height="30" transform="matrix(0.53, -0.848, 0.848, 0.53, 113.665, 76.007)" fill="#23a0d5"/>
-                    <path id="Polygon_1" data-name="Polygon 1" d="M2.5,0,5,4H0Z" transform="translate(138.721 87)" fill="#23a0d5"/>
+        <div class="logo">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 67.625 79.248">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                      stroke: #23a0d5;
+                      stroke-width: 4px;
+                    }
+              
+                    .cls-2 {
+                      fill: #23a0d5;
+                    }
+              
+                    .cls-3 {
+                      fill: #29672d;
+                      font-size: 30px;
+                      font-family: FranklinGothic-Medium, Franklin Gothic;
+                      font-weight: 500;
+                    }
+                  </style>
+                </defs>
+                <g id="Logo_SVG" data-name="Logo SVG" transform="translate(2 2.311)">
+                  <g id="Logo_Shape" data-name="Logo Shape" transform="translate(-111.721 -19.51)">
+                    <path id="Path_4" data-name="Path 4" class="cls-1" d="M684.951,6.355V-31.078L717.017-49.49l31.558,18.412V6.355l-31.81,18.77Z" transform="translate(-573.23 69)"/>
+                    <path id="Path_5" data-name="Path 5" class="cls-1" d="M684.951-34.16l8.319,7.923,23.187-14.118,23.977,14.118,7.342-8.551" transform="translate(-572.951 73)"/>
+                    <path id="Path_6" data-name="Path 6" class="cls-1" d="M684.951-33.085l8.319-7.923,23.21,12.695,23.954-12.695,7.518,8.731" transform="translate(-572.951 108)"/>
+                    <path id="Path_7" data-name="Path 7" class="cls-1" d="M625.533-48.061V-35.59" transform="translate(-482 68)"/>
+                    <path id="Path_8" data-name="Path 8" class="cls-1" d="M625.412,11.687V25.864" transform="translate(-482 68)"/>
+                    <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-2" width="9" height="33" transform="translate(141.63 29.352) rotate(-59)"/>
+                    <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-2" width="11" height="30" transform="matrix(0.53, -0.848, 0.848, 0.53, 113.665, 76.007)"/>
+                    <path id="Polygon_1" data-name="Polygon 1" class="cls-2" d="M2.5,0,5,4H0Z" transform="translate(138.721 87)"/>
                   </g>
-                  <text id="F" transform="translate(143 320)" fill="#29672d" font-size="30" font-family="FranklinGothic-Medium, Franklin Gothic" font-weight="500"><tspan x="-7.617" y="0">F</tspan></text>
+                  <text id="F" class="cls-3" transform="translate(32 47)"><tspan x="-7.617" y="0">F</tspan></text>
                 </g>
-              </svg>
+            </svg>              
+
         </div>
+
+    
+
+    <a href="#">Home</a>
+
+    <i class="fa fa-2x fa-bars"></i>
     </nav>
 
 
@@ -172,25 +248,79 @@
             	<div class="streamCard upLight">Three</div>
             	<div class="streamCard upLight">Four</div>
             	<div class="streamCard upLight">Five</div>
-            </div>
-            
+            </div>   
         </div>
     
     
     
     </section>
+        
+        
+    <section>
+        <strong>News Update</strong>
+
+        <div class="upLight news">
+
+        </div>
+    </section>
+    <section>
+
+        <strong>What is Open Source</strong>
+
+        <div class="downLight openSource">
+
+            <div class="osExamples">
+                <div class="upLight circle">Whatsapp</div>
+                <div class="upLight circle">Facebook</div>
+                <div class="upLight circle">Telegram</div>
+                <div class="upLight circle">Twitter</div>
+            </div>
+
+            <p style="line-height: 1em; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod minima velit possimus earum perspiciatis exercitationem optio deleniti, quas reprehenderit natus, quis, doloribus tempore ex. Quos cupiditate maxime recusandae totam reprehenderit.</p>
+        </div>
+        
+    </section>
+    <section>
+        <strong style="margin-left: 1em;">Projects</strong>
+
+        <div class="wrapper">
+            <div class="streams">
+            	<div class="streamCard upLight">One</div>
+            	<div class="streamCard upLight">Two</div>
+            	<div class="streamCard upLight">Three</div>
+            	<div class="streamCard upLight">Four</div>
+            	<div class="streamCard upLight">Five</div>
+            </div>   
+        </div>
+    </section>
+
+    <section>
+            <strong style="margin-left: 1em;">Get Started</strong>
+
+        <div class="wrapper">
+            <div class="streams">
+                <div class="streamCard upLight">One</div>
+                <div class="streamCard upLight">Two</div>
+                <div class="streamCard upLight">Three</div>
+                <div class="streamCard upLight">Four</div>
+                <div class="streamCard upLight">Five</div>
+            </div>   
+        </div>
     
+    </section>
+
+
+    <footer>
     
-    
-    
-    
-    
-    
-    
-    <section>News Update</section>
-    <section>What is Open Source</section>
-    <section>Projects</section>
-    <section>Get Started</section>
-    <footer>Footer</footer>
+        <div class="borderedLight bracket">
+            <div class="social">
+                <div class="upLight circle">Whatsapp</div>
+                <div class="upLight circle">Facebook</div>
+                <div class="upLight circle">Telegram</div>
+                <div class="upLight circle">Twitter</div>
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>
