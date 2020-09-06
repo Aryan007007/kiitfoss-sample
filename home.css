@@ -201,12 +201,12 @@
             }
             
             .newsFlash{
-                height: 260px;
-                width: 80vw;
-                margin: 20px 2.5vw 0px;
+                height: 350px;
+                width: 78vw;
+                margin: 20px 5vw 0;
                 border-radius: 7.5px;
             }
-            
+           
             .openSource{
                 display: grid;
                 grid-template-rows: repeat(auto-fit,minmax(fit-content, 1fr));
@@ -268,7 +268,7 @@
                 padding-bottom: 20px;
             }
             
-            footer .circle,svg{
+            footer .circle, footer svg{
                 width: 40px;
                 height: 40px;
                 font-size: 0.8em;
