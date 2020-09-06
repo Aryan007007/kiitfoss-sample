@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIIT FOSS/OSH</title>
-    <script src="https://use.fontawesome.com/81a3138848.js"></script>
+    <script src="https://kit.fontawesome.com/35d7ed200e.js" crossorigin="anonymous"></script>
     <style>
         :root {
             /* --backgroundLight:#F7F3FF; */
@@ -98,6 +98,7 @@
 
             }
 
+
             footer {
                 width: 100vw;
             }
@@ -144,7 +145,7 @@
             }
 
 
-            i {
+            nav .fa-bars {
                 justify-self: right;
                 margin-right: 10px;
             }
@@ -158,6 +159,7 @@
                 line-height: 1em; 
                 text-align: center;
                 margin: 1em;
+                
             }
 
 
@@ -199,38 +201,86 @@
                 flex: 0 0 10px;
             }
 
-            .news,
+            
             .openSource {
-                margin: auto;
+                /* margin: auto; */
                 width: 90vw;
                 height: 300px;
                 border-radius: 12.5px;
             }
 
+            .newsFlash{
+                height: 260px;
+                width: 80vw;
+                margin: 20px 2.5vw 0px;
+                border-radius: 7.5px;
+            }
+
             .openSource{
                 display: grid;
-                grid-template-rows: 1fr 2fr;
+                grid-template-rows: repeat(auto-fit,minmax(fit-content, 1fr));
+                height: fit-content;
             }
 
             .osExamples,
             .social {
-                padding: 20px 0;
+                padding: 20px 0 0;
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(auto-fit,minmax(50px, 1fr));
                 justify-items: center;
                 align-items: center;
-            }
 
+            }
             .circle {
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
+                display: flex;
+            }
+
+            .circle svg{
+                font-size: 2.5em;
+                margin: auto;
+            }
+
+            .circle:nth-child(1){
+                color:green;
+            }
+
+            .circle:nth-child(2){
+                color: blue;
+            }
+
+            .circle:nth-child(3){
+                color:rgb(255, 78, 107);
+            }
+
+            .circle:nth-child(4){
+                color:rebeccapurple;
             }
 
             .bracket {
                 width: 90vw;
                 margin: 70px auto 10px auto;
                 height: fit-content;
+            }
+
+            footer{
+                text-align: center;
+            }
+
+            footer h2{
+                margin-top: 10px;
+            }
+
+            footer .social{
+                padding-bottom: 20px;
+            }
+
+            footer .circle,svg{
+                width: 40px;
+                height: 40px;
+                font-size: 0.8em;
             }
         }
     </style>
@@ -241,7 +291,7 @@
 
 
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105" height="105" viewBox="10 15 130 85">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25vw" height="105" viewBox="10 15 130 85">
                 <defs>
                   <style>
                     .cls-1 {
@@ -347,8 +397,9 @@
     <section>
         <strong>News Update</strong>
 
-        <div class="upLight news">
-
+        <div class="borderedLight news">
+            <iframe src="https://www.wikipedia.org/" class = "newsFlash" frameborder="0">
+            </iframe>
         </div>
     </section>
     <section>
@@ -358,11 +409,31 @@
         <div class="downLight openSource">
 
             <div class="osExamples">
-                <div class="upLight circle">Whatsapp</div>
-                <div class="upLight circle">Facebook</div>
-                <div class="upLight circle">Telegram</div>
-                <div class="upLight circle">Twitter</div>
+                <div class="upLight circle">
+                    <i class="fa fa-git"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fa fa-linux"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fab fa-jenkins"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fab fa-ubuntu"></i>
+                </div>
             </div>
+
+            <div class="osExamples" style="margin: 0 10vw;">
+                <div class="upLight circle">
+                    <i class="fab fa-ubuntu"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fab fa-ubuntu"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fab fa-ubuntu"></i>
+                </div>
+            </div>    
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quod minima velit possimus earum perspiciatis exercitationem optio deleniti, quas reprehenderit natus,
@@ -405,11 +476,22 @@
     <footer>
 
         <div class="borderedLight bracket">
+            <h2>React out to us at</h2>
             <div class="social">
-                <div class="upLight circle">Whatsapp</div>
-                <div class="upLight circle">Facebook</div>
-                <div class="upLight circle">Telegram</div>
-                <div class="upLight circle">Twitter</div>
+                <div class="upLight circle">
+                    <i class="fa fa-whatsapp"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fa fa-facebook"></i>
+                </div>
+                <div class="upLight circle">
+                    <i class="fa fa-instagram"></i>
+                </div>
+                <a href="#">
+                    <div class="upLight circle">
+                        <i class="fa fa-github"></i>
+                    </div>
+                </a>
             </div>
         </div>
 
