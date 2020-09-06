@@ -17,10 +17,7 @@
         body {
             background-color: var(--backgroundLight);
             text-align: left;
-            font-family: bahnschrift; 
-            /* font-family: candara; */
-            /* font-family: constantia; */
-            
+            font-family: Open Sans; 
             line-height: 3em;
         }
         
